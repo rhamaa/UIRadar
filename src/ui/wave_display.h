@@ -1,0 +1,6 @@
+#ifndef WAVE_DISPLAY_H
+#define WAVE_DISPLAY_H
+#include <raylib.h>
+#include <stddef.h>
+void draw_wave_display(Rectangle area, float *buffer, size_t n);
+#endif // WAVE_DISPLAY_H

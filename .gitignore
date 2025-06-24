@@ -1,0 +1,12 @@
+# File hasil kompilasi dan build
+build/
+main
+*.o
+
+# File spesifik OS
+.DS_Store
+
+# File spesifik editor/IDE
+.vscode/
+*.swp
+*~
