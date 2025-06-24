@@ -2,7 +2,7 @@
 #include <math.h>
 
 #define PI 3.1415926535
-#define FREQUENCY 30000.0      // 30 kHz
+#define FREQUENCY 3000.0      // 3 kHz
 #define SAMPLE_RATE 1000000.0  // 1 MHz sample rate
 #define ADC_MAX_VALUE 65535    // 16-bit ADC
 

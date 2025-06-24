@@ -9,7 +9,7 @@ BUILD_DIR = build
 
 # Source Files (Hanya main.c, raygui.c TIDAK perlu di sini lagi)
 SRCS = $(SRC_DIR)/main.c \
-       $(SRC_DIR)/function/sinus.c \
+       $(SRC_DIR)/function/adlink_adc_dumy.c \
        $(SRC_DIR)/ui/wave_display.c \
        $(SRC_DIR)/ui/ppi_display.c \
        $(SRC_DIR)/ui/ppi_speed_slider.c
@@ -38,7 +38,7 @@ CFLAGS = -I$(RAYLIB_INCLUDE_PATH) \
 
 # Linker Flags (Sesuaikan dengan OS Anda)
 # Untuk Linux/macOS:
-LDFLAGS = -L$(RAYLIB_LIB_PATH) -lraylib -lGL -lm -lpthread -ldl -lrt -std=c99 -Wall
+LDFLAGS = -L$(RAYLIB_LIB_PATH) -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 
 # Untuk Windows (MinGW-w64):
 # LDFLAGS = -L$(RAYLIB_LIB_PATH) -lraylib -lopengl32 -lgdi32 -lwinmm -luser32 -static -std=c99 -Wall
