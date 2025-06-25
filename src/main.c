@@ -1,7 +1,12 @@
 #include <raylib.h>
 #define RAYGUI_IMPLEMENTATION
 #include <raygui.h>
+
+// Include the UI modules and the new ADC dummy function
 #include "function/adlink_adc_dumy.h"
+
+// Include the terminal style header
+#include "styles/terminal/style_terminal.h"
 #include "ui/wave_display.h"
 #include "ui/ppi_display.h"
 #include "ui/ppi_speed_slider.h"
@@ -11,10 +16,12 @@
 int main() {
     // Inisialisasi jendela Raylib
 
-    // Layout constants
-    const int screenWidth = 1000;
-    const int screenHeight = 600;
-    InitWindow(screenWidth, screenHeight, "UI Radar Layout Modular");
+    // Inisialisasi window dalam mode layar penuh
+    const int screenWidth = GetMonitorWidth(0);
+    const int screenHeight = GetMonitorHeight(0);
+    InitWindow(screenWidth, screenHeight, "UI Radar with ADC Data");
+    ToggleFullscreen();
+    GuiLoadStyleTerminal(); // Load the terminal style
     SetTargetFPS(60);
 
     // Data untuk ADC
@@ -36,7 +43,7 @@ int main() {
         Rectangle sliderRect = {600, 280, 350, 160};
 
         BeginDrawing();
-        ClearBackground(RAYWHITE);
+        ClearBackground(BLACK);
 
         // Draw UI panels
         draw_ppi_display(ppiRect, ppi_speed);

@@ -31,8 +31,10 @@ RAYGUI_PATH = $(LIB_DIR)/raygui
 RAYGUI_INCLUDE_PATH = $(RAYGUI_PATH)/src # Lokasi raygui.h
 
 # Compiler Flags
+# Tambahkan path dasar raygui (-Ilib/raygui) agar subfolder 'styles' dapat di-include
 CFLAGS = -I$(RAYLIB_INCLUDE_PATH) \
          -I$(RAYGUI_INCLUDE_PATH) \
+         -I$(RAYGUI_PATH) \
          -I$(INCLUDE_DIR) \
          -Wall -std=c99
 

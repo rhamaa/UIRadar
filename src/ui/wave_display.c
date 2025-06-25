@@ -3,9 +3,9 @@
 #include <stddef.h>
 
 void draw_wave_display(Rectangle area, unsigned short *buffer, size_t buffer_size) {
-    DrawRectangleRec(area, Fade(SKYBLUE, 0.2f));
-    DrawRectangleLinesEx(area, 2, DARKGRAY);
-    DrawText("ADC Wave Display", area.x + 10, area.y + 10, 18, DARKGRAY);
+    DrawRectangleRec(area, Fade(BLACK, 0.5f));
+    DrawRectangleLinesEx(area, 2, GRAY);
+    DrawText("ADC Wave Display", area.x + 10, area.y + 10, 18, LIGHTGRAY);
 
     if (buffer_size < 2) return;
 
