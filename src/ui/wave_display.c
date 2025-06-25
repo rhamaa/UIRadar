@@ -5,7 +5,7 @@
 void draw_wave_display(Rectangle area, unsigned short *buffer, size_t buffer_size) {
     DrawRectangleRec(area, Fade(BLACK, 0.5f));
     DrawRectangleLinesEx(area, 2, GRAY);
-    DrawText("ADC Wave Display", area.x + 10, area.y + 10, 18, LIGHTGRAY);
+        DrawText("Wave Analyzer", area.x + 10, area.y + 10, 18, LIGHTGRAY);
 
     if (buffer_size < 2) return;
 

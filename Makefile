@@ -12,7 +12,10 @@ SRCS = $(SRC_DIR)/main.c \
        $(SRC_DIR)/function/adlink_adc_dumy.c \
        $(SRC_DIR)/ui/wave_display.c \
        $(SRC_DIR)/ui/ppi_display.c \
-       $(SRC_DIR)/ui/ppi_speed_slider.c
+       $(SRC_DIR)/ui/ppi_speed_slider.c \
+       $(SRC_DIR)/ui/wave_controls.c \
+       $(SRC_DIR)/ui/datetime_display.c \
+       $(SRC_DIR)/ui/freq_analyzer.c
 
 # Object Files
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRCS))
