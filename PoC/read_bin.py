@@ -1,6 +1,6 @@
 import struct
 
-filename = "data.bin"
+filename = "90khz.bin"
 
 # Baca seluruh isi file sebagai unsigned short (2 byte per data)
 with open(filename, "rb") as f:
