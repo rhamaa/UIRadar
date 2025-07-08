@@ -4,6 +4,7 @@ import sys
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QGridLayout
 )
+from PySide6.QtCore import Qt  # Added for detecting key presses
 
 # Impor semua kelas widget kustom Anda
 from widgets.ppi_display import PPIDesktopWidget
@@ -47,6 +48,14 @@ class MainWindow(QMainWindow):
         layout.setRowStretch(0, 1)
         layout.setRowStretch(1, 1)
         layout.setRowStretch(2, 1)
+
+    def keyPressEvent(self, event):
+        """Close the window when Esc key is pressed."""
+        if event.key() == Qt.Key_Escape:
+            self.close()
+        else:
+            # Call base class implementation for other keys
+            super().keyPressEvent(event)
 
 
 if __name__ == "__main__":
