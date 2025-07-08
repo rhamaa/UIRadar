@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import struct
 import os
 
-filename = "90khz.bin"  # Ganti jika nama file berbeda
+filename = "30khz.bin"  # Ganti jika nama file berbeda
 sample_rate = 20_000_000  # 20 MHz, sesuai hardware PCI-9846H
 
 if not os.path.exists(filename):
